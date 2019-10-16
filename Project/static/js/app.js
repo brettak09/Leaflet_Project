@@ -16,13 +16,6 @@ function createMap(earthquake) {
     accessToken: API_KEY
   });
 
-  // Create a all LayerGroups
-  // var layers = {
-  //   Magnitude_Small: new L.LayerGroup(),
-  //   Magnitude_Medium: new L.LayerGroup(),
-  //   Magnitude_High: new L.LayerGroup()
-  // };
-
 
   // Create the map object with options
  map = L.map("map-id", {
@@ -49,60 +42,7 @@ function createMap(earthquake) {
   // Create a layer control, pass in the baseMaps and overlayMaps. Add the layer control to the map
   L.control.layers(null, overlays).addTo(map);
 }
-
-// // Legend Informaiton Here:
-// // Create Legend
-// var info = L.control({
-//   position: "bottomright"
-// });
-
-// // insert div with class legend:
-// info.onAdd = function() {
-//   var div = L.DomUtil.create("div", "legend");
-//   return div;
-// };
-
-// // Add the info legend to the map
-// info.addTo(map);
-
-
-// this needs to be in for loop and I'll need 
-// initialize circles
-// var circles = {
-//   Magnitude_Small: L.circleMarker({
-//     radius: 100
-//   }),
-//   Magnitude_Medium: L.circleMarker({
-//     radius: 200
-//   }),
-//   Magnitude_High: L.circleMarker({
-//     radius: 300
-//   })
-// };
-
-// // Perform an API call to the Citi Bike API to get station information. Call createMarkers when complete
-// d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(getData){
-
-// var circleLocations = ([getData["geometry"]["coordinates"]["1"], getData["geometry"]["coordinates"]["0"]]);
-
-// var circleCount ={
-//     Magnitude_Small: 0,
-//     Magnitude_Medium: 0,
-//     Magnitude_High: 0
-//   };
-
-//   // create variable to access circles, and magnitude
-//   var cicrleMagData;
-
-//   // loop through earthquakedata to 
-//   for (var index = 0; index < earthquakeData.length; index++) {
-
-//   }
-
-// });
-
-// code is breaking around here
-
+// create circles
 function createCircles(response) {
 
     // Pull the "earthquakeData" property off of response.data
@@ -140,7 +80,7 @@ function createCircles(response) {
       // Update circleCount
       circleCount[status]++;
 
-      //code is currently breaking here.  Pickup here
+      
       // initialize circles
       var circleDesign = {
         Magnitude_Small: {radius: 150000, color: "green" },
@@ -164,9 +104,10 @@ function createCircles(response) {
 
     }
   
-    // Create a layer group made from the bike markers array, pass it into the createMap function
+    // Create a layer group 
     createMap(L.layerGroup(earthquakeLocations));
 
+    // Legend code here
     var legend = L.control({position: 'bottomright'});
     legend.onAdd = function (map) {
 
