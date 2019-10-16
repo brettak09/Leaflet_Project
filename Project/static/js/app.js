@@ -68,17 +68,17 @@ function createMap(earthquake) {
 
 // this needs to be in for loop and I'll need 
 // initialize circles
-var circles = {
-  Magnitude_Small: L.circleMarker({
-    radius: 100
-  }),
-  Magnitude_Medium: L.circleMarker({
-    radius: 200
-  }),
-  Magnitude_High: L.circleMarker({
-    radius: 300
-  })
-};
+// var circles = {
+//   Magnitude_Small: L.circleMarker({
+//     radius: 100
+//   }),
+//   Magnitude_Medium: L.circleMarker({
+//     radius: 200
+//   }),
+//   Magnitude_High: L.circleMarker({
+//     radius: 300
+//   })
+// };
 
 // // Perform an API call to the Citi Bike API to get station information. Call createMarkers when complete
 // d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/4.5_week.geojson", function(getData){
@@ -173,7 +173,7 @@ function createCircles(response) {
     var div = L.DomUtil.create('div', 'info legend');
 
     labels = ['<strong>Earthquake Key</strong>'],
-    categories = ["Magnitude 4.5", "Magnitude 4.6 to 4.8", "Magnitude 4.9+"];
+    categories = ["Magnitude 4.5 - Green", "Magnitude 4.6 to 4.8 - Yellow", "Magnitude 4.9+ - Red"];
       var colorKeys = [
         'Magnitude_Small',
         'Magnitude_Medium',
