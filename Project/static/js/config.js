@@ -1,2 +1,2 @@
 // API key
-var API_KEY = "API Key";
+var API_KEY = "API Key Here"

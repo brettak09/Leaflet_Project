@@ -83,9 +83,9 @@ function createCircles(response) {
       
       // initialize circles
       var circleDesign = {
-        Magnitude_Small: {radius: 150000, color: "green" },
-        Magnitude_Medium: {radius: 250000, color: "yellow"},
-        Magnitude_High: {radius: 500000, color: "red"}
+        Magnitude_Small: {radius: 150000, color: "#008000" },
+        Magnitude_Medium: {radius: 250000, color: "#FFFF00"},
+        Magnitude_High: {radius: 500000, color: "#FF0000"}
         };
 
       // For each station, create a marker and bind a popup with the station's name
@@ -124,7 +124,7 @@ function createCircles(response) {
 
             div.innerHTML += 
             labels.push(
-                '<i class="circle" style="background:' + circleDesign[colorKeys[i]]["color"] + '"></i> ' +
+                '<i style="background:' + circleDesign[colorKeys[i]]["color"] + '"></i> ' +
             (categories[i] ? categories[i] : '+'));
 
         }
