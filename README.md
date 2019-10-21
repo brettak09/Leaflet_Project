@@ -10,9 +10,15 @@ Utilize the GeoJson feed provided by the USGS on earthquake data and integrates 
 ​
 ## Conclusion
 
-
+From the data collected, earthquake locations, and size can easily be identified and displayed. 
 ​
 ## Technologies Used
+
+- D3
+- JavaScript
+- USGS API
+- HTML
+- Bootstrap CSS
 ​
 #### Data Crunching
 

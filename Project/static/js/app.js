@@ -29,7 +29,7 @@ function createMap(earthquake) {
     ]
   });
 
-  // ADd our lightmap to tile Layer to map
+  // Add our lightmap to tile Layer to map
   lightmap.addTo(map);
 
   // Creat an overlays object to add to the layer control
