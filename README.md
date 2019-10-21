@@ -2,13 +2,14 @@
 ​
 ## Overview
 
-Looks at earthquake magnitudes from the ​USGS data to provide earthquake magnitudes over 4.5 in the last 30 days.
+Looks at earthquake magnitudes from the ​USGS site.
 
 ## Purpose/Objective
 
-Utilize the GeoJson feed provided by the USGS on earthquake data and integrate the data into the D3 leaflet library
+Utilize the GeoJson feed provided by the USGS on earthquake data and integrates the data into the D3 leaflet library.
 ​
 ## Conclusion
+
 
 ​
 ## Technologies Used
@@ -18,3 +19,5 @@ Utilize the GeoJson feed provided by the USGS on earthquake data and integrate t
 -
 
 ### How to Run
+
+Will require adding a Mapbox ApI token add to the config.js file located at Project/static/js.
